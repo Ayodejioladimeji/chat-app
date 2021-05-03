@@ -18,6 +18,12 @@ const ChatFeed = (props) => {
     />
   ));
 
+  // The section of the logout
+  const logout = () => {
+    window.localStorage.clear();
+    window.location.href="/";
+  }
+
   const renderMessages = () => {
     const keys = Object.keys(messages);
 
@@ -47,9 +53,7 @@ const ChatFeed = (props) => {
     <div className="chat-feed">
       <div className="chat-title-container">
         <div className="chat-title">{chat?.title}</div>
-        <div className="chat-subtitle">
-          {chat.people.map((person) => ` ${person.person.username}`)}
-        </div>
+        <button className="logout" onClick={()=>logout()}>Logout</button>
       </div>
       {renderMessages()}
       <div style={{ height: '100px' }} />
