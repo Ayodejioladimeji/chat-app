@@ -217,7 +217,7 @@
 }
 
 .wrapper {
-  height: 100vh;
+  height: 90vh;
 	width: 100%;
   background:rgba(255, 0, 0, 0.295);
   display: flex;
@@ -228,9 +228,9 @@
 
 .input {
   color: #333;
-  font-size: 1.2rem;
+  font-size: 1rem;
 	margin: 0 auto;
-  padding: 1.5rem 2rem;
+  padding: 0.8rem 2rem;
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
   border: none;
@@ -251,23 +251,24 @@
   color: red;
   margin-bottom: 30px;
   width: 100%;
-  font-size: 2.3em;;
+  font-size: 2em;;
 }
 
 .button {
   border-radius: 4px;
   border: none;
-  background-color: white;
-  color: black;
   text-align: center;
   text-transform: uppercase;
-  font-size: 22px;
-  padding: 20px;
+  font-size:15px;
+  padding: 16px;
   width: 200px;
   transition: all 0.4s;
   cursor: pointer;
   margin: 5px;
   width: 90%;
+  color:#fff;
+  background:red;
+  font-weight: bold;
 }
 .button span {
   cursor: pointer;
@@ -302,3 +303,43 @@
 }
 
 
+@media screen and (max-width:425px){
+
+.nav img{
+  height:80px;
+  width:80px;
+}
+
+.wrapper{
+  height:90vh;
+}
+
+.input {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  margin-bottom: 25px;
+}
+
+.form {
+  width: 400px;
+}
+
+.title {
+  text-align: center;
+  color: red;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 2em;;
+}
+
+.button {
+  font-size: 18px;
+  padding: 20px;
+  margin: 5px;
+  color:#fff;
+  background:red;
+  font-weight: bold;
+}
+
+
+}
