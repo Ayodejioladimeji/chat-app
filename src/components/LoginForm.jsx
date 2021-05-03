@@ -10,6 +10,7 @@ const Modal = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [click, setClick] = useState(true)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ const Modal = () => {
       window.location.reload();
       setError('');
     } catch (err) {
-      setError('Oops, incorrect credentials.');
+      setError('Please provide correct login details.');
     }
   };
 
@@ -37,17 +38,17 @@ const Modal = () => {
       </div>
       <div className="wrapper">
         <div className="form">
-          <h1 className="title">Chat Application</h1>
+          <h1 className="title">Zuri Chat</h1>
           <form onSubmit={handleSubmit}>
             <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required />
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" required />
             <div align="center">
-              <button type="submit" className="button">
+              <button onClick={()=>setClick()} type="submit" className="button">
                 <span>Start chatting</span>
               </button>
             </div>
           </form>
-          <h1>{error}</h1>
+          <p style={{color:'red', textAlign:"center"}}>{error}</p>
         </div>
       </div>
     </main>
